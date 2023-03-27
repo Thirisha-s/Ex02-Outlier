@@ -30,7 +30,9 @@ Remove the outliers.
 Plot the datas using Box Plot.
  
 ## PROGRAM:
-DEVELOPED BY: SANDHIYA R, REGISTER NUMBER: 212222230129
+DEVELOPED BY: THIRISHA .s
+REGISTER NUMBER: 212222230160
+```
 import pandas as pd
 df=pd.read_csv("/content/bhp.csv")
 df.head()
@@ -101,9 +103,9 @@ print(outliers_weight)
 newdata_weight=dataset[(dataset['weight']>=l_weight) & (dataset['weight']<=u_weight)]
 print(newdata_weight)
 sns.boxplot(x='weight',data=newdata_weight)
-
+```
 # OUTPUT:
-bhp.csv IQR METHOD
+# bhp.csv IQR METHOD
 ## df.head():
 ![Screenshot 2023-03-27 103203](https://user-images.githubusercontent.com/120380280/227845266-fb3eb085-b1d4-4282-bd63-519f0d355d89.png)
 ## df.describe():
