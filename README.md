@@ -30,9 +30,9 @@ Remove the outliers.
 Plot the datas using Box Plot.
  
 ## PROGRAM:
-DEVELOPED BY: THIRISHA .s
-REGISTER NUMBER: 212222230160
 ```
+DEVELOPED BY: thirisha.s
+REGISTER NUMBER: 212222230160
 import pandas as pd
 df=pd.read_csv("/content/bhp.csv")
 df.head()
