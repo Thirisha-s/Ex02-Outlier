@@ -30,7 +30,7 @@ Remove the outliers.
 Plot the datas using Box Plot.
  
 ## PROGRAM:
-```
+```python
 DEVELOPED BY: thirisha.s
 REGISTER NUMBER: 212222230160
 import pandas as pd
@@ -42,8 +42,10 @@ df.shape
 
 import seaborn as sns
 sns.boxplot(x="price_per_sqft",data=df)
+``
 
 ### removing ouliers of bhp.csv file using IQR
+```python
 Q1=df['price_per_sqft'].quantile(0.25)
 Q3=df['price_per_sqft'].quantile(0.75)
 IQR=Q3-Q1
@@ -55,10 +57,9 @@ outliers=df[(df['price_per_sqft']<lower) | (df['price_per_sqft']>upper)]
 print(outliers)
 newdata.shape
 sns.boxplot(x="price_per_sqft",data=newdata)
-
-
+```
 ### removing ouliers of bhp.csv file using Zscore of 3
-
+```python
 from scipy import stats
 import numpy as np
 z_score=np.abs(stats.zscore(df['price_per_sqft']))
@@ -76,9 +77,10 @@ dataset.describe()
 dataset.info()
 import seaborn as sns
 sns.boxplot(x='height',data=dataset)
+```
 
 ### Using IQR detect height outliers and print them( height_weight.csv)
-
+```python
 Q1_height=dataset['height'].quantile(0.25)
 Q3_height=dataset['height'].quantile(0.75)
 IQR_HEIGHT=Q3_height-Q1_height
@@ -89,10 +91,10 @@ print(outliers_height)
 newdata_height=dataset[(dataset['height']>=l_height) & (dataset['height']<=u_height)]
 print(newdata_height)
 sns.boxplot(x='height',data=newdata_height)
-
+```
 
 ### Using IQR, detect weight outliers and print them( height_weight.csv)
-
+```python
 Q1_weight=dataset['weight'].quantile(0.25)
 Q3_weight=dataset['weight'].quantile(0.75)
 IQR_WEIGHT=Q3_weight-Q1_weight
